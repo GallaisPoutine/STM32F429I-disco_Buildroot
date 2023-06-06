@@ -1,6 +1,6 @@
 url_buildroot = https://buildroot.org/downloads/buildroot-2023.05-rc3.tar.gz
 archive_buildroot = buildroot.tar.gz
-system_image = stm32f769i-disco_system.uImage
+system_image = stm32f429i-disco_system.uImage
 dir_download = downloads
 dir_configs = configs
 dir_buildroot = buildroot
