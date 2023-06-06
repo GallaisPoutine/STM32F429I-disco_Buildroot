@@ -19,7 +19,7 @@ saveconfig:
 	cp -fv $(dir_buildroot)/.config $(dir_configs)/buildroot
 
 flash:
-	cd $(dir_buildroot)/output/build/host-openocd-0.10.0/tcl && ../../../host/usr/bin/openocd \
+	cd $(dir_buildroot)/output/build/host-openocd-0.12.0/tcl && ../../../host/usr/bin/openocd \
 	-f board/stm32f429discovery.cfg \
 	-c "init" \
 	-c "reset init" \
