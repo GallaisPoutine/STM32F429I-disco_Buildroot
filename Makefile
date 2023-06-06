@@ -15,6 +15,9 @@ bootstrap:
 build:
 	make -j$(shell grep -c '^processor' /proc/cpuinfo) -C $(dir_buildroot)
 
+saveconfig:
+	cp -fv $(dir_buildroot)/.config $(dir_configs)/buildroot
+
 flash:
 	cd $(dir_buildroot)/output/build/host-openocd-0.10.0/tcl && ../../../host/usr/bin/openocd \
 	-f board/stm32f429discovery.cfg \
