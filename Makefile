@@ -15,6 +15,9 @@ bootstrap:
 build:
 	make -j$(shell grep -c '^processor' /proc/cpuinfo) -C $(dir_buildroot)
 
+menuconfig:
+	make -C $(dir_buildroot) menuconfig
+
 saveconfig:
 	cp -fv $(dir_buildroot)/.config $(dir_configs)/buildroot
 
